@@ -1,0 +1,70 @@
+<div class="container">
+    <h1>Payment Details</h1>
+    <form ngNoForm action="https://testsecureacceptance.cybersource.com/pay" target="_blank" method="POST">
+        
+        <div class="form-group">
+            <label for="name">locale</label>
+            <input type="text" class="form-control" id="locale" name="locale" [(ngModel)]="model.locale" required>
+          </div>
+
+        <div class="form-group">
+        <label for="name">access_key</label>
+        <input type="text" class="form-control" id="access_key" name="access_key" [(ngModel)]="model.access_key" required>
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">profile_id</label>
+        <input type="text" class="form-control" id="profile_id" name="profile_id" [(ngModel)]="model.profile_id">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">transaction_uuid</label>
+        <input type="text" class="form-control" id="transaction_uuid" name="transaction_uuid" [(ngModel)]="model.transaction_uuid">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">signed_field_names</label>
+        <input type="text" class="form-control" id="signed_field_names" name="signed_field_names" [(ngModel)]="model.signed_field_names">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">unsigned_field_names</label>
+        <input type="text" class="form-control" id="unsigned_field_names" name="unsigned_field_names" [(ngModel)]="model.unsigned_field_names">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">signed_date_time</label>
+        <input type="text" class="form-control" id="signed_date_time" name="signed_date_time" [(ngModel)]="model.signed_date_time">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">transaction_type</label>
+        <input type="text" class="form-control" id="transaction_type" name="transaction_type" [(ngModel)]="model.transaction_type">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">reference_number</label>
+        <input type="text" class="form-control" id="reference_number" name="reference_number" [(ngModel)]="model.reference_number">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">amount</label>
+        <input type="text" class="form-control" id="amount" name="amount" [(ngModel)]="model.amount">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">currency</label>
+        <input type="text" class="form-control" id="currency" name="currency" [(ngModel)]="model.currency">
+      </div>
+
+      <div class="form-group">
+        <label for="profile_id">signature</label>
+        <input type="text" class="form-control" id="signature" name="signature" [(ngModel)]="model.signature">
+      </div>
+
+      <input type="button" class="btn btn-warning" style="margin-right: 10px;" (click)="generateSignature()" value="Generate Signature" >
+      
+      <button type="submit" class="btn btn-success" value="Submit" >Submit</button>
+
+    </form>
+</div>
