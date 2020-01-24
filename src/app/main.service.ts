@@ -11,7 +11,7 @@ export class MainService {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://localhost:8080';
+  url = 'https://cybersource-payment.herokuapp.com';
   cyberSourceUrl = "https://testsecureacceptance.cybersource.com/pay";
 
   encode(data): Observable<any> {
