@@ -7,9 +7,12 @@ var path = require('path');
 
 
 var indexRouter = require('./server/routes/index');
-var cyberSourceRouter = require('./server/routes/cybersource');
+//var cyberSourceRouter = require('./server/routes/cybersource');
 
 var cors = require('cors')
+
+var port = process.env.PORT || 8080;
+
 
 
 var app = express();
@@ -28,7 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/dist/app')));
 
 app.use('/encode', indexRouter);
-app.use('/cybersource', cyberSourceRouter);
+//app.use('/cybersource', cyberSourceRouter);
 
 
 // catch 404 and forward to error handler
@@ -47,7 +50,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(80);
+app.listen(port);
 
 
 module.exports = app;
